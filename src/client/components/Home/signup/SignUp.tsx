@@ -13,10 +13,11 @@ import {
 } from "@/client/components/ui/form";
 import { Input } from "@/client/components/ui/input";
 import { Button } from "@/client/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card";
 import { signUpAction } from "@/server/actions/auth";
 import { useAction } from "next-safe-action/hook";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const signUpFormSchema = z
   .object({
@@ -38,7 +39,7 @@ export default function SignUpComponent({
 
   const signUpAct = useAction(signUp, {
     onSuccess: () => {
-      router.push("/");
+      router.push("/login");
       router.refresh();
     },
   });
@@ -110,7 +111,15 @@ export default function SignUpComponent({
                 </FormItem>
               )}
             />
-            <Button type="submit">Sign Up</Button>
+            <div className="flex flex-col gap-2">
+              <Button type="submit">Sign Up</Button>
+              <Link
+                href={"/signin"}
+                className="text-blue-500 underline hover:cursor-pointer"
+              >
+                Already have an account SignIn
+              </Link>
+            </div>
           </form>
         </Form>
       </CardContent>
