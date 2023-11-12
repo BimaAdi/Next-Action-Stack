@@ -1,4 +1,5 @@
-# Next 14 Boilerplate
+# Next Action Stack
+Nextjs stack based on server component and server action
 
 ## Stack
 - NextJS 14
