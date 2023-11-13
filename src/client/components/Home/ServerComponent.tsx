@@ -17,7 +17,7 @@ export default function ServerComponent({ hello }: Props) {
         <CardTitle>Server Component</CardTitle>
       </CardHeader>
       <CardContent>
-        <div>{hello}</div>
+        <div id="testServerComponentId">{hello}</div>
       </CardContent>
     </Card>
   );

@@ -7,6 +7,7 @@ Nextjs stack based on server component and server action
 - next-safe-action
 - prisma
 - lucia
+- Playwright
 
 ## Requirement
 - Node v20

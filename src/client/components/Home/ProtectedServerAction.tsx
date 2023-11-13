@@ -48,9 +48,10 @@ export default function ProtectedServerAction({ sayHello }: Props) {
           <Input
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            data-testid="protected-server-action-input"
           />
-          <Button variant={"default"}>Say Hello</Button>
-          {helloMessage ? <div>{helloMessage}</div> : <div></div>}
+          <Button variant={"default"} data-testid="protected-server-action-submit">Say Hello Protected</Button>
+          {helloMessage ? <div data-testid="protected-server-action-output">{helloMessage}</div> : <div data-testid="protected-server-action-output"></div>}
         </form>
       </CardContent>
     </Card>

@@ -17,7 +17,7 @@ export default function ProtectedServerComponent({ msg }: Props) {
         <CardTitle>Protected Server Component</CardTitle>
       </CardHeader>
       <CardContent>
-        <div>{msg}</div>
+        <div id="testProtectedServerComponentId">{msg}</div>
       </CardContent>
     </Card>
   );

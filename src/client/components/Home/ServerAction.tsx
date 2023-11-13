@@ -41,9 +41,10 @@ export default function ServerAction({ sayHello }: Props) {
           <Input
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            data-testid="server-action-input"
           />
-          <Button variant={"default"}>Say Hello</Button>
-          {helloMessage ? <div>{helloMessage}</div> : <div></div>}
+          <Button variant={"default"} data-testid="server-action-submit">Say Hello</Button>
+          {helloMessage ? <div data-testid="server-action-output">{helloMessage}</div> : <div data-testid="server-action-output"></div>}
         </form>
       </CardContent>
     </Card>
