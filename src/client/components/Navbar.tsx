@@ -13,13 +13,14 @@ export default function Navbar({
   const signOutAct = useAction(signOut);
   return (
     <div className="w-full min-h-[65px] flex p-5 bg-slate-900 text-slate-50">
-      <ul className="flex justify-between items-center gap-4 text-white text-md">
+      <ul data-testid="navbar" className="flex justify-between items-center gap-4 text-white text-md">
         <li>
           <Link href={"/"}>Home</Link>
         </li>
         {isLogin ? (
           <>
             <li
+              data-testid="signout"
               className="hover:cursor-pointer"
               onClick={() => signOutAct.execute(null)}
             >

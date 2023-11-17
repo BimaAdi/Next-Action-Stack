@@ -21,6 +21,10 @@ Nextjs stack based on server component and server action
 1. Run server `pnpm run dev`
 1. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Testing
+- `npx playwright test`
+- test on debug mode `npx playwright test --debug`
+
 ## Deployment
 1. Install depedency `pnpm install`
 1. Copy .env.example to .env fill based on your configuration

@@ -70,7 +70,7 @@ export default function SignInComponent({
                 <FormItem>
                   <FormLabel>Username</FormLabel>
                   <FormControl>
-                    <Input placeholder="username" {...field} />
+                    <Input data-testid="usernameInput" placeholder="username" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -83,14 +83,14 @@ export default function SignInComponent({
                 <FormItem>
                   <FormLabel>Password</FormLabel>
                   <FormControl>
-                    <Input type="password" placeholder="password" {...field} />
+                    <Input data-testid="passwordInput" type="password" placeholder="password" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
             <div className="flex flex-col gap-2">
-              <Button type="submit">Sign In</Button>
+              <Button data-testid="signInButton" type="submit">Sign In</Button>
               <Link
                 href={"/signup"}
                 className="text-blue-500 underline hover:cursor-pointer"

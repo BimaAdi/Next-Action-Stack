@@ -3,6 +3,7 @@ declare global {
     interface ProcessEnv {
       NODE_ENV: string | undefined;
       DATABASE_URL: string | undefined;
+      BASE_URL: string | undefined;
     }
   }
 }

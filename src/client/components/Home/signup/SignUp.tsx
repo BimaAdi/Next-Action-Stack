@@ -39,7 +39,7 @@ export default function SignUpComponent({
 
   const signUpAct = useAction(signUp, {
     onSuccess: () => {
-      router.push("/login");
+      router.push("/signin");
       router.refresh();
     },
   });
@@ -75,7 +75,7 @@ export default function SignUpComponent({
                 <FormItem>
                   <FormLabel>Username</FormLabel>
                   <FormControl>
-                    <Input placeholder="username" {...field} />
+                    <Input data-testid="usernameInputSignUp" placeholder="username" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -88,7 +88,7 @@ export default function SignUpComponent({
                 <FormItem>
                   <FormLabel>Password</FormLabel>
                   <FormControl>
-                    <Input type="password" placeholder="password" {...field} />
+                    <Input data-testid="passwordInputSignUp" type="password" placeholder="password" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -102,6 +102,7 @@ export default function SignUpComponent({
                   <FormLabel>Confirm Password</FormLabel>
                   <FormControl>
                     <Input
+                      data-testid="confirmPasswordInputSignUp"
                       type="password"
                       placeholder="confirm password"
                       {...field}
@@ -112,7 +113,7 @@ export default function SignUpComponent({
               )}
             />
             <div className="flex flex-col gap-2">
-              <Button type="submit">Sign Up</Button>
+              <Button data-testid="signUpButton" type="submit">Sign Up</Button>
               <Link
                 href={"/signin"}
                 className="text-blue-500 underline hover:cursor-pointer"
