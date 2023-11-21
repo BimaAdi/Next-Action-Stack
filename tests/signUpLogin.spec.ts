@@ -9,7 +9,8 @@ test.describe("sign_up and login", () => {
   test("signUp then signIn", async ({ page }) => {
     // Sign Up Test
     await page.goto("/signup");
-
+    
+    await page.waitForURL("/signup");
     await page.getByTestId("usernameInputSignUp").fill("John");
     await page.getByTestId("passwordInputSignUp").fill("secretpassword");
     await page.getByTestId("confirmPasswordInputSignUp").fill("secretpassword");

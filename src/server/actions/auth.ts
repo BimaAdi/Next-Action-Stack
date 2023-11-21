@@ -70,6 +70,9 @@ export const signInAction = action(
           message: "Incorrect username or password",
         };
       }
+      if (e instanceof Error) {
+        throw new Error(e.toString())
+      }
     }
   }
 );
