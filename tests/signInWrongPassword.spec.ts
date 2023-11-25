@@ -9,6 +9,8 @@ test.describe("signIn wrong password", () => {
   test("signIn Wrong password", async ({ page }) => {
     // Sign In Page
     await page.goto("/signin");
+
+    await page.waitForURL("/signin");
     await page.getByTestId("usernameInput").fill("John");
     await page.getByTestId("passwordInput").fill("wrongpassword");
     await page.getByTestId("signInButton").click();

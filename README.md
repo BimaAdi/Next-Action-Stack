@@ -22,8 +22,8 @@ Nextjs stack based on server component and server action
 1. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Testing
-- `npx playwright test`
-- test on debug mode `npx playwright test --debug`
+- install playwright depedencies `pnpm dlx playwright install`
+- testing `pnpm run test:e2e` or test in debug mode `pnpm run test:e2edebug`
 
 ## Deployment
 1. Install depedency `pnpm install`
